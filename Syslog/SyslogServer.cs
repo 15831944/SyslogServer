@@ -26,8 +26,11 @@ using System.Diagnostics;
 
 using Aonaware.Utility.Database;
 
+
 namespace Aonaware.Syslog
 {
+
+
 	/// <summary>
 	/// Receives, decodes and dispatches syslog messages to anyone who cares
 	/// </summary>
@@ -141,14 +144,12 @@ namespace Aonaware.Syslog
 				{
 					exiting = true;
 					if (ssSwitch.TraceVerbose)
-						Trace.WriteLine("Message collection thread shutting down",
-							DbTraceListener.catInfo);
+						Trace.WriteLine("Message collection thread shutting down", DbTraceListener.catInfo);
 				}
 				catch (Exception ex)
 				{
 					if (ssSwitch.TraceError)
-						Trace.WriteLine(String.Format("Error reciving syslog message: {0}",
-							ex.Message), DbTraceListener.catError);
+						Trace.WriteLine(String.Format("Error reciving syslog message: {0}", ex.Message), DbTraceListener.catError);
 				}
 			} while (!exiting);
 		}

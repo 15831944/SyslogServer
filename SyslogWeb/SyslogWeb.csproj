@@ -58,6 +58,7 @@
     <Content Include="css\main.css" />
     <EmbeddedResource Include="database\createuser.sql" />
     <EmbeddedResource Include="database\users.sql" />
+    <Content Include="connections.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

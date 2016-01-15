@@ -24,6 +24,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Diagnostics;
 
+
 namespace Aonaware.Utility.Database
 {
 	/// <summary>
@@ -88,8 +89,7 @@ namespace Aonaware.Utility.Database
 				user = user.ToLower().Trim();
 				pass = HashPassword(pass);
 
-				const string sql = "SELECT COUNT(*) FROM users WHERE userName = ? " +
-						  "AND password = ? AND active = 1";
+				const string sql = "SELECT COUNT(*) FROM users WHERE userName = ? AND password = ? AND active = 1";
 				OleDbCommand cmd = CreateCommand(sql);
 				cmd.Parameters.Add("@userName", OleDbType.Char, 16, "userName");
 				cmd.Parameters.Add("@password", OleDbType.Char, 32, "password");
@@ -160,8 +160,7 @@ namespace Aonaware.Utility.Database
 				user = user.ToLower().Trim();
 				password = HashPassword(password);
 
-				const string sql = "INSERT INTO users (userName, password, active) " +
-						  "VALUES (?, ?, 1)";
+				const string sql = "INSERT INTO users (userName, password, active) VALUES (?, ?, 1)";
 				OleDbCommand cmd = CreateCommand(sql);
 				cmd.Parameters.Add("@userName", OleDbType.Char, 16, "userName");
 				cmd.Parameters.Add("@password", OleDbType.Char, 32, "password");
@@ -197,4 +196,6 @@ namespace Aonaware.Utility.Database
 
 		private OleDbConnection conn = null;
 	}
+
+
 }

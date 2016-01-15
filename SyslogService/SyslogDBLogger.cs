@@ -37,7 +37,6 @@ namespace Aonaware.SyslogService
 			_e = e;
 		}
 
-		#region IDatabaseLog Members
 
 		public OleDbCommand CreateInsertCommand()
 		{
@@ -63,7 +62,7 @@ namespace Aonaware.SyslogService
 			pc["severity"].Value = (int) _e.Message.Severity;
 			pc["message"].Value = _e.Message.Message;
 		}
-		#endregion
+
 
 		private readonly SyslogEventArgs _e;
 	}
