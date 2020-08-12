@@ -26,4 +26,4 @@ using System.Runtime.CompilerServices;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("2016.1.15.1721")]
+[assembly: AssemblyVersion("2020.08.12.1523")]
