@@ -120,7 +120,7 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DatabaseInstaller - Kopieren.cs" />
+    <Compile Include="MissingAttributes.cs" />
     <Compile Include="DatabaseInstaller.cs">
       <SubType>Code</SubType>
     </Compile>
